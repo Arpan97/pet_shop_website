@@ -6,6 +6,93 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-theme-color: 243, 244, 246;
+  --tw-bg-opacity: 1;
+  /* new  */
+  --tg-body-font-family: "Poppins", sans-serif;
+  --tg-heading-font-family: "Poppins", sans-serif;
+  --tg-primary-color: #f89e52;
+  --tg-secondary-color: #3482ff;
+  --tg-body-font-color: #666666;
+  --tg-heading-font-color: #0b0b0b;
+  --tg-banner-title-color: #2a2a2a;
+  --tg-paragraph-color: #666666;
+  --tg-body-font-size: 16px;
+  --tg-body-font-weight: 400;
+  --tg-heading-font-weight: 700;
+  --tg-body-line-height: 1.7;
+  --tg-heading-line-height: 1.2;
+  --tg-section-background: #292f3f;
+  --tg-section-background-two: #1f1d28;
+  --tg-section-background-three: #26242d;
+  --tg-menu-color: #252541;
+  --tg-arrow-color: #6f7c90;
+  --tg-border-color: #f3f3f3;
+  --tg-border-color-two: #d9d9d9;
+  --tg-form-border-color: #d5d5d5;
+  --tg-old-lace: #fff2e4;
+  --tg-magnolia: #f0ebff;
+  --tg-lavender: #e4f1ff;
+  --tg-blue: #2b78f3;
+  --tg-blue-two: #265fdb;
+  --tg-blue-two-three: #398ddb;
+  --tg-indigo: #a666f7;
+  --tg-purple: #9270ff;
+  --tg-dark-electric: #605e7a;
+  --tg-pink: #f84d55;
+  --tg-red: #f76766;
+  --tg-orange: #f26f3b;
+  --tg-yellow: #f1f026;
+  --tg-yellow-two: #f5a623;
+  --tg-yellow-three: #ecb321;
+  --tg-green: #1b9a81;
+  --tg-green-two: #7ddb39;
+  --tg-teal: #57c0ce;
+  --tg-cyan: #0dcaf0;
+  --tg-white: #ffffff;
+  --tg-black: #292930;
+  --tg-black-two: #1d1d25;
+  --tg-black-three: #1e1c1e;
+  --tg-black-four: #212737;
+  --tg-gray: #f4f3f9;
+  --tg-gray-two: #fbfdff;
+  --tg-gray-three: #7e7e8c;
+  --tg-gray-four: #b8b8c5;
+  --tg-gray-five: #818080;
+  --tg-gray-six: #f7f7f7;
+  --tg-gray-seven: #6c7183;
+  --tg-gray-eight: #f4f4f4;
+  --tg-granite-gray: #6b645d;
+  --tg-bright-gray: #edeef1;
+  --tg-spanish-gray: #989898;
+  --tg-cadet-grey: #92a5b4;
+  --tg-cultured: #f3f7fa;
+  --tg-black-coral: #5f5f71;
+  --tg-silver: #c5c7cb;
+  --tg-silver-two: #aeaeae;
+  --tg-silver-three: #afafaf;
+  --tg-silver-three: #8d959b;
+  --tg-silver-foil: #b0b0b0;
+  --tg-manatee: #9e9da9;
+  --tg-onyx: #1d1d25;
+  --facebook: #3b5998;
+  --twitter: #00acee;
+  --linkedin: #1976d2;
+  --pinterest: #3b5998;
+  --youtube: #c4302b;
+  --skype: #00aff0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Moon Walk";
+  src: url("/fonts/Moon%20Walk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,12 +105,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-theme-color) / var(--tw-bg-opacity));
 }
 
 @layer utilities {
