@@ -52,6 +52,13 @@ export const FilterData = [
   { _id: 3, name: "5001 - 10000", type: "5001" },
   { _id: 4, name: "More than 10000", type: "10000>" },
 ];
+export const OrderFilterData = [
+  { _id: 1, title: "All", key: "all" },
+  { _id: 2, title: "Pending", key: "pending" },
+  { _id: 3, title: "Delivered", key: "delivered" },
+  { _id: 4, title: "Cancelled", key: "cancelled" },
+  { _id: 5, title: "Refunded", key: "refund" },
+];
 export const categoryData = [
   {
     _id: 1,
@@ -943,5 +950,78 @@ export const productsData = [
     maxQuantity: 4,
     imageArray: ["", ""],
     category: "Cat",
+  },
+];
+
+export const orderHistory = [
+  {
+    _id: 1,
+    title: "Pug",
+    slug: "pug",
+    color: "Black",
+    image: Images.pug,
+    quantity: 1,
+    orderPrice: 15000,
+    paymentType: "Cash",
+    status: 1,
+    deliveredOn: new Date().toLocaleString(),
+    userDetail: {
+      _id: 1,
+      name: "Arpan Govila",
+      address: "Gwalior Madhya Pradesh",
+    },
+  },
+  {
+    _id: 2,
+    title: "Persian Cat",
+    slug: "persian-cat",
+    color: "White",
+    image: Images.persianCat,
+    quantity: 1,
+    paymentType: "Online",
+    orderPrice: 10000,
+    status: 0,
+    userDetail: {
+      _id: 1,
+      name: "Arpan Govila",
+      address: "Gwalior Madhya Pradesh",
+    },
+  },
+  {
+    _id: 3,
+    title: "Canary",
+    slug: "canary",
+    color: "White",
+    image: Images.heroBanner,
+    quantity: 1,
+    orderPrice: 8000,
+    paymentType: "Cash",
+    status: 2,
+    cancelledOn: new Date().toLocaleString(),
+    reason: "Not required",
+    userDetail: {
+      _id: 1,
+      name: "Arpan Govila",
+      address: "Gwalior Madhya Pradesh",
+    },
+  },
+  {
+    _id: 4,
+    title: "Goldfish",
+    slug: "goldfish",
+    color: "White",
+    image: Images.heroBanner,
+    quantity: 1,
+    orderPrice: 500,
+    status: 3,
+    paymentType: "Online",
+    deliveredOn: new Date().toLocaleString(),
+    returnedOn: new Date().toLocaleString(),
+    reason: "Not same what i ordered",
+    userDetail: {
+      _id: 1,
+      name: "Arpan Govila",
+      address: "Gwalior Madhya Pradesh",
+    },
   },
 ];
