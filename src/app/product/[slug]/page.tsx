@@ -12,6 +12,8 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { IoIosHeartEmpty, IoIosHeart } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import List from "@/components/ListView/List";
+import ProductCard from "../ProductCard";
 
 const ProductDetail = ({ params }: any) => {
   const pathUrl = usePathname();
@@ -34,6 +36,7 @@ const ProductDetail = ({ params }: any) => {
     selectedImage: "",
     quantity: 0,
     isWishlist: false,
+    recommendedCategory: [],
   });
   const updateState = useCallback((key?: any, value?: any) => {
     if (typeof key === "object") {
@@ -80,10 +83,15 @@ const ProductDetail = ({ params }: any) => {
       let filterData = productsData?.find(
         (elem) => elem?.slug === params?.slug
       );
+      let categoryData = productsData?.filter(
+        (elem) => elem?.category === filterData?.category
+      );
+      let rec_category = categoryData?.slice(0, 4);
       updateState({
         loader: false,
         productDetail: filterData,
         selectedImage: filterData?.image,
+        recommendedCategory: rec_category,
       });
     }, 2000);
     return () => clearTimeout(timeOut);
@@ -97,8 +105,9 @@ const ProductDetail = ({ params }: any) => {
           {imageArray?.map((item, index) => {
             return (
               <div
+                key={index}
                 onClick={() => updateState("selectedImage", item)}
-                className="border hover:cursor-pointer bg-red-400"
+                className="border hover:cursor-pointer"
               >
                 <Image src={item} alt={name} width={200} height={200} />
               </div>
@@ -231,6 +240,9 @@ const ProductDetail = ({ params }: any) => {
       </div>
     );
   };
+  const renderProduct = (item: any) => (
+    <ProductCard key={item.id} data={item} />
+  );
   return (
     <>
       {state?.loader ? (
@@ -250,6 +262,17 @@ const ProductDetail = ({ params }: any) => {
                   __html: state?.productDetail?.otherInfo,
                 }}
               />
+            </div>
+          )}
+          {state?.recommendedCategory?.length > 0 && (
+            <div className="text-black mb-4">
+              <p className="text-xl font-bold px-4 my-3">You can also buy</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:mx-3 md:my-3 ml-2 mr-2">
+                <List
+                  data={state?.recommendedCategory}
+                  renderList={renderProduct}
+                />
+              </div>
             </div>
           )}
         </>

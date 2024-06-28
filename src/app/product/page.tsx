@@ -118,13 +118,6 @@ const Product = () => {
       />
       {item?.name}
     </label>
-    // <Checkbox
-    //   key={item.id}
-    //   label={item.name}
-    //   value={item.name}
-    //   selectedValues={selectedValues}
-    //   setSelectedValues={setSelectedValues}
-    // />
   );
 
   const renderProduct = (item: any) => (

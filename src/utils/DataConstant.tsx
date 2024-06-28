@@ -27,6 +27,8 @@ export const Images = {
     "https://images.pexels.com/photos/16881826/pexels-photo-16881826/free-photo-of-two-cats-lying-on-a-scratching-post.jpeg?auto=compress&cs=tinysrgb&w=800",
   dogBedAccessory:
     "https://images.pexels.com/photos/2248516/pexels-photo-2248516.jpeg?auto=compress&cs=tinysrgb&w=800",
+  userProfile:
+    "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=800",
 };
 
 export const Toast = (type: string, message: string) => {
@@ -1023,5 +1025,43 @@ export const orderHistory = [
       name: "Arpan Govila",
       address: "Gwalior Madhya Pradesh",
     },
+  },
+];
+
+export const UserSideBar = [
+  {
+    _id: 1,
+    title: "Profile",
+    slug: "profile",
+  },
+  {
+    _id: 2,
+    title: "Notification",
+    slug: "notification",
+  },
+  {
+    _id: 3,
+    title: "My Orders",
+    slug: "order",
+  },
+  {
+    _id: 4,
+    title: "My Wishlist",
+    slug: "wishlist",
+  },
+  {
+    _id: 5,
+    title: "My Address",
+    slug: "address",
+  },
+  {
+    _id: 6,
+    title: "Privacy & Policy",
+    slug: "privacy",
+  },
+  {
+    _id: 7,
+    title: "Help & Support",
+    slug: "help",
   },
 ];
