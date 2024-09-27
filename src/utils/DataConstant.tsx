@@ -955,6 +955,72 @@ export const productsData = [
   },
 ];
 
+export const notificationList = [
+  //0 - new, 1 - opened
+  {
+    _id: 1,
+    title: "Order Delivered",
+    description: "Order has been delivered",
+    notificationDate: new Date().toLocaleString(),
+    status: 1,
+    image: Images.banner1,
+  },
+  {
+    _id: 2,
+    title: "Congratulations - New Offer unlocked",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nulla reprehenderit possimus corporis iure vero exercitationem soluta accusamus obcaecati consectetur quia dolorem quibusdam ex eveniet et, eaque quos. Quibusdam, alias!",
+    notificationDate: new Date().toLocaleString(),
+    status: 0,
+    image: Images.banner2,
+  },
+  {
+    _id: 3,
+    title: "Congratulations - New Offer unlocked",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nulla reprehenderit possimus corporis iure vero exercitationem soluta accusamus obcaecati consectetur quia dolorem quibusdam ex eveniet et, eaque quos. Quibusdam, alias!",
+    notificationDate: new Date().toLocaleString(),
+    status: 0,
+    image: Images.banner3,
+  },
+  {
+    _id: 4,
+    title: "Congratulations - New Offer unlocked",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nulla reprehenderit possimus corporis iure vero exercitationem soluta accusamus obcaecati consectetur quia dolorem quibusdam ex eveniet et, eaque quos. Quibusdam, alias!",
+    notificationDate: new Date().toLocaleString(),
+    status: 0,
+    image: Images.banner2,
+  },
+  {
+    _id: 5,
+    title: "Congratulations - New Offer unlocked",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nulla reprehenderit possimus corporis iure vero exercitationem soluta accusamus obcaecati consectetur quia dolorem quibusdam ex eveniet et, eaque quos. Quibusdam, alias!",
+    notificationDate: new Date().toLocaleString(),
+    status: 0,
+    image: Images.banner3,
+  },
+  {
+    _id: 6,
+    title: "Congratulations - New Offer unlocked",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nulla reprehenderit possimus corporis iure vero exercitationem soluta accusamus obcaecati consectetur quia dolorem quibusdam ex eveniet et, eaque quos. Quibusdam, alias!",
+    notificationDate: new Date().toLocaleString(),
+    status: 0,
+    image: Images.banner2,
+  },
+  {
+    _id: 7,
+    title: "Congratulations - New Offer unlocked",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nulla reprehenderit possimus corporis iure vero exercitationem soluta accusamus obcaecati consectetur quia dolorem quibusdam ex eveniet et, eaque quos. Quibusdam, alias!",
+    notificationDate: new Date().toLocaleString(),
+    status: 0,
+    image: Images.banner3,
+  },
+];
+
 export const orderHistory = [
   {
     _id: 1,
